@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chocolingo — Legal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fffbf5;
+        --text: #2c2420;
+        --heading: #1b3a4b;
+        --accent: #d4a574;
+        --muted: #8b7d6b;
+        --border: #e8ddd0;
+        --card: #fff8f0;
+        --max-w: 720px;
+        --nav-h: 56px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--nav-h) + 16px);
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ── Sticky nav ── */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 251, 245, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 0 12px;
+        flex-wrap: wrap;
+      }
+      .nav a,
+      .nav button {
+        padding: 6px 14px;
+        border-radius: 100px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        font-family: "DM Sans", sans-serif;
+        text-decoration: none;
+        border: 1.5px solid var(--border);
+        color: var(--muted);
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .nav a:hover,
+      .nav button:hover {
+        border-color: var(--accent);
+        color: var(--heading);
+      }
+      .nav a.active {
+        background: var(--heading);
+        color: #fff;
+        border-color: var(--heading);
+      }
+      .nav .sep {
+        width: 1px;
+        height: 20px;
+        background: var(--border);
+        margin: 0 4px;
+      }
+
+      /* ── Container ── */
+      .container {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 5rem;
+      }
+
+      /* ── Header ── */
+      .brand {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      .brand h1 {
+        font-family: "DM Serif Display", serif;
+        font-size: 2.4rem;
+        color: var(--heading);
+        letter-spacing: -0.02em;
+      }
+      .brand-sub {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+
+      /* ── Sections ── */
+      .doc-section {
+        display: none;
+      }
+      .doc-section.active {
+        display: block;
+      }
+      .doc-title {
+        text-align: center;
+        font-family: "DM Serif Display", serif;
+        font-size: 1.6rem;
+        color: var(--heading);
+        margin-bottom: 0.25rem;
+      }
+      .updated {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+      .note {
+        background: var(--card);
+        border-left: 3px solid var(--accent);
+        padding: 1rem 1.25rem;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+        border-radius: 0 6px 6px 0;
+      }
+      h2 {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.3rem;
+        color: var(--heading);
+        margin: 2.5rem 0 0.75rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1.5px solid var(--border);
+      }
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--heading);
+        margin: 1.5rem 0 0.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      ul {
+        margin: 0 0 1rem 1.5rem;
+        list-style: none;
+      }
+      ul li {
+        position: relative;
+        padding-left: 1rem;
+        margin-bottom: 0.4rem;
+      }
+      ul li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .tier-name {
+        font-weight: 700;
+        color: var(--heading);
+        margin: 1.25rem 0 0.4rem;
+      }
+      .caps {
+        font-size: 0.9rem;
+      }
+      a {
+        color: var(--heading);
+      }
+      .footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1.5px solid var(--border);
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 600px) {
+        .nav {
+          gap: 4px;
+          padding: 0 8px;
+          height: auto;
+          min-height: var(--nav-h);
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+        .nav a,
+        .nav button {
+          padding: 5px 10px;
+          font-size: 0.78rem;
+        }
+        .container {
+          padding: 2rem 1rem 3rem;
+        }
+        .brand h1 {
+          font-size: 1.8rem;
+        }
+        .doc-title {
+          font-size: 1.3rem;
+        }
+        h2 {
+          font-size: 1.15rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <a href="#privacy-en" class="nav-link active" data-section="privacy-en"
+        >Privacy Policy</a
+      >
+      <a href="#terms-en" class="nav-link" data-section="terms-en"
+        >Terms of Service</a
+      >
+      <div class="sep"></div>
+      <button id="lang-toggle" onclick="toggleLang()">MN 🇲🇳</button>
+    </nav>
+
+    <div class="container">
+      <div class="brand"><h1>Chocolingo</h1></div>
+      <div class="brand-sub">English Learning for Mongolian Speakers</div>
+
+      <!-- ════════════════════════════════════════════ -->
+      <!-- ENGLISH PRIVACY POLICY                       -->
+      <!-- ════════════════════════════════════════════ -->
+      <section
+        id="privacy-en"
+        class="doc-section active"
+        data-lang="en"
+        data-doc="privacy"
+      >
+        <div class="doc-title">Privacy Policy</div>
+        <div class="updated">Last updated: March 13, 2026</div>
+        <div class="note">
+          In the event of any conflict between the English and Mongolian
+          versions of this Privacy Policy, the English version shall prevail.
+        </div>
+
+        <p>
+          Chocolingo ("we," "our," or "us") is committed to protecting your
+          privacy. This Privacy Policy explains how we collect, use, disclose,
+          and safeguard your information when you use our mobile application
+          Chocolingo (the "App"), an English language learning platform designed
+          for Mongolian speakers.
+        </p>
+        <p>
+          By using the App, you agree to the collection and use of information
+          in accordance with this policy.
+        </p>
+
+        <h2>1. Information We Collect</h2>
+        <h3>1.1 Information You Provide</h3>
+        <ul>
+          <li>
+            Email address and password (used for account creation via Supabase
+            Auth)
+          </li>
+          <li>Display name</li>
+          <li>Learning language preferences</li>
+          <li>Daily learning goals</li>
+          <li>Placement test responses</li>
+          <li>Referral codes (when you use or share a referral code)</li>
+        </ul>
+        <h3>1.2 Information Collected Automatically</h3>
+        <ul>
+          <li>Quiz answers, scores, and accuracy statistics</li>
+          <li>XP earned and spent, streak data, and achievement progress</li>
+          <li>Flashcard review history and spaced repetition data</li>
+          <li>
+            Subscription tier and usage (daily question counts, power-up
+            inventory)
+          </li>
+          <li>App usage patterns and session duration</li>
+          <li>Device type, operating system version, and app version</li>
+          <li>Crash reports and error logs (via Sentry)</li>
+          <li>Analytics events (via Firebase Analytics)</li>
+        </ul>
+        <h3>1.3 Information from Third Parties</h3>
+        <p>
+          We use the following third-party services that may collect data
+          independently:
+        </p>
+        <ul>
+          <li>
+            Supabase — authentication, database, and backend infrastructure
+          </li>
+          <li>
+            Google Mobile Ads (AdMob) — advertising services for free-tier users
+            (subject to Google's privacy policy)
+          </li>
+          <li>Google Firebase — analytics and event tracking</li>
+          <li>
+            Sentry — crash reporting and error monitoring (collects device info,
+            stack traces, and error context)
+          </li>
+          <li>
+            ElevenLabs — text-to-speech audio generation (pre-generated audio
+            served from our servers; no user data is sent to ElevenLabs at
+            runtime)
+          </li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Create and manage your account</li>
+          <li>
+            Deliver personalized learning content based on your CEFR level and
+            progress
+          </li>
+          <li>
+            Track your learning streak, XP, achievements, and leaderboard
+            ranking
+          </li>
+          <li>Operate the spaced repetition (SM-2) flashcard system</li>
+          <li>Process XP-based purchases (power-ups and streak freezes)</li>
+          <li>
+            Manage your subscription tier and enforce tier-based content access
+          </li>
+          <li>Process referral codes and grant associated benefits</li>
+          <li>
+            Send push notifications for streak reminders (only if you enable
+            this)
+          </li>
+          <li>
+            Display relevant advertisements to free-tier users via Google Mobile
+            Ads
+          </li>
+          <li>Monitor app stability and fix bugs via crash reporting</li>
+          <li>
+            Improve app performance, develop new features, and analyze usage
+            patterns
+          </li>
+          <li>Communicate with you about your account or app updates</li>
+        </ul>
+
+        <h2>3. Data Storage and Security</h2>
+        <p>
+          Your data is stored securely using Supabase (PostgreSQL), hosted on
+          servers with row-level security enabled on all database tables. We
+          implement industry-standard security measures including encrypted
+          connections (HTTPS/TLS), role-based access controls, server-side rate
+          limiting, and input validation on all remote procedure calls.
+        </p>
+        <p>
+          While we take reasonable precautions to protect your data, no method
+          of electronic storage or transmission is 100% secure. We cannot
+          guarantee absolute security.
+        </p>
+
+        <h2>4. Advertising</h2>
+        <p>
+          Free-tier users of Chocolingo may see advertisements served by Google
+          Mobile Ads (AdMob). Google may use your device's advertising
+          identifier and other data to serve personalized ads. You can opt out
+          of personalized advertising through your device settings:
+        </p>
+        <ul>
+          <li>
+            iOS: Settings → Privacy → Tracking → disable "Allow Apps to Request
+            to Track"
+          </li>
+          <li>
+            Android: Settings → Google → Ads → Opt out of Ads Personalization
+          </li>
+        </ul>
+        <p>Plus and Pro subscribers do not see advertisements.</p>
+
+        <h2>5. Subscription Tiers</h2>
+        <p>
+          Chocolingo offers three subscription tiers: Free, Plus, and Pro. Your
+          subscription tier determines which features and content you can
+          access. We collect and store your current tier, tier expiry date, and
+          daily usage counters (such as questions answered per day) to enforce
+          tier-based limits.
+        </p>
+        <p>
+          Subscription tier may be granted through in-app purchase, referral
+          codes, or promotional offers. See our Terms of Service for full
+          details on each tier.
+        </p>
+
+        <h2>6. Data Sharing and Disclosure</h2>
+        <p>
+          We do not sell your personal information. We may share your
+          information only in the following circumstances:
+        </p>
+        <ul>
+          <li>
+            With service providers (Supabase, Google, Sentry, ElevenLabs)
+            necessary to operate the App
+          </li>
+          <li>If required by law, court order, or governmental authority</li>
+          <li>
+            To protect the rights, property, or safety of Chocolingo, our users,
+            or others
+          </li>
+          <li>With your consent</li>
+        </ul>
+        <p>
+          Leaderboard data (display name and XP ranking) is visible to other
+          users of the App by design.
+        </p>
+        <p>
+          Referral codes are shared voluntarily between users. When a referral
+          code is redeemed, both the referrer and the recipient receive a
+          temporary Plus tier upgrade. No additional personal data is shared
+          between the parties.
+        </p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>
+          The App is not directed to children under the age of 13. We do not
+          knowingly collect personal information from children under 13. If you
+          believe a child has provided us with personal information, please
+          contact us and we will delete it promptly.
+        </p>
+        <p>
+          If you are between 13 and 18 years of age, you should review this
+          Privacy Policy with a parent or guardian before using the App.
+        </p>
+
+        <h2>8. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request deletion of your account and associated data</li>
+          <li>
+            Request export of your personal data in a machine-readable format
+            (data portability)
+          </li>
+          <li>Opt out of push notifications through your device settings</li>
+          <li>Opt out of personalized advertising (see Section 4)</li>
+        </ul>
+        <p>
+          To exercise any of these rights, contact us at
+          <a href="mailto:support@chocolingo.com">support@chocolingo.com</a>. We
+          will respond to requests within 30 days.
+        </p>
+
+        <h2>9. Data Retention</h2>
+        <p>
+          We retain your personal data for as long as your account is active. If
+          you delete your account, we will delete or anonymize your personal
+          data within 30 days, except where retention is required by law.
+        </p>
+        <p>
+          Anonymized, aggregated data (such as overall usage statistics) may be
+          retained indefinitely for analytics and product improvement purposes.
+        </p>
+
+        <h2>10. Offline Data</h2>
+        <p>
+          The App stores certain data locally on your device (including cached
+          flashcard decks, quiz data, subscription tier, and pending offline
+          actions) using SQLite and device storage. This local data is not
+          transmitted to our servers until you are connected to the internet.
+          You can clear local data by uninstalling the App.
+        </p>
+
+        <h2>11. App Updates</h2>
+        <p>
+          The App may require you to update to the latest version to continue
+          using certain features. When an update is required, the App will
+          display a notification. Update checks involve transmitting your
+          current app version to our servers.
+        </p>
+
+        <h2>12. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. We will notify
+          you of significant changes via the App or by email. Your continued use
+          of the App after changes are posted constitutes your acceptance of the
+          revised policy.
+        </p>
+
+        <h2>13. Contact Us</h2>
+        <p>
+          If you have any questions about this Privacy Policy, please contact
+          us:
+        </p>
+        <p>
+          Email:
+          <a href="mailto:support@chocolingo.com">support@chocolingo.com</a
+          ><br />
+          Website: <a href="https://chocolingo.com">https://chocolingo.com</a
+          ><br />
+          App: Chocolingo — English Learning for Mongolian Speakers
+        </p>
+      </section>
+
+      <!-- ════════════════════════════════════════════ -->
+      <!-- ENGLISH TERMS OF SERVICE                     -->
+      <!-- ════════════════════════════════════════════ -->
+      <section
+        id="terms-en"
+        class="doc-section"
+        data-lang="en"
+        data-doc="terms"
+      >
+        <div class="doc-title">Terms of Service</div>
+        <div class="updated">Last updated: March 13, 2026</div>
+        <div class="note">
+          In the event of any conflict between the English and Mongolian
+          versions of these Terms, the English version shall prevail.
+        </div>
+
+        <p>
+          These Terms of Service ("Terms") govern your use of the Chocolingo
+          mobile application ("App"), operated by Chocolingo App ("we," "us," or
+          "our"). By downloading or using the App, you agree to be bound by
+          these Terms.
+        </p>
+
+        <h2>1. Eligibility</h2>
+        <p>
+          You must be at least 13 years of age to use the App. By using the App,
+          you represent that you meet this requirement. If you are under 18, you
+          should review these Terms with a parent or guardian.
+        </p>
+
+        <h2>2. Account Registration</h2>
+        <p>
+          To access most features of the App, you must create an account using a
+          valid email address and password. You are responsible for:
+        </p>
+        <ul>
+          <li>Maintaining the confidentiality of your account credentials</li>
+          <li>All activity that occurs under your account</li>
+          <li>
+            Notifying us immediately of any unauthorized use of your account
+          </li>
+        </ul>
+        <p>
+          We reserve the right to suspend or terminate accounts that violate
+          these Terms.
+        </p>
+
+        <h2>3. Use of the App</h2>
+        <h3>3.1 Permitted Use</h3>
+        <p>
+          Chocolingo is an English language learning application for personal,
+          non-commercial use. You may use the App to learn English, complete
+          quizzes, review flashcards, and track your progress.
+        </p>
+        <h3>3.2 Prohibited Conduct</h3>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the App for any unlawful purpose</li>
+          <li>
+            Attempt to reverse engineer, decompile, or extract source code from
+            the App
+          </li>
+          <li>
+            Abuse, exploit, or manipulate the XP system, leaderboard, or any
+            game mechanics
+          </li>
+          <li>Create multiple accounts to gain unfair advantages</li>
+          <li>
+            Abuse, share, or exploit referral codes in a fraudulent manner
+          </li>
+          <li>
+            Use automated tools, bots, or scripts to interact with the App
+          </li>
+          <li>Upload or transmit any malicious code or harmful content</li>
+          <li>Harass, impersonate, or harm other users</li>
+          <li>
+            Attempt to circumvent subscription tier restrictions or content
+            gating
+          </li>
+        </ul>
+
+        <h2>4. XP System and Virtual Currency</h2>
+        <p>
+          Chocolingo uses an XP (experience points) system as a form of virtual
+          currency. XP is earned by completing quizzes and activities within the
+          App.
+        </p>
+        <p>XP can be spent on:</p>
+        <ul>
+          <li>
+            Power-ups (Skip: 50 XP, Heart Shield: 80 XP, XP Boost: 100 XP)
+          </li>
+          <li>
+            Streak Freeze: 500 XP (protects your streak for one missed day;
+            maximum 1 held at a time; Plus and Pro subscribers receive automatic
+            streak freeze protection)
+          </li>
+        </ul>
+        <p>
+          Important: XP has no monetary value, cannot be transferred between
+          accounts, cannot be exchanged for real money, and will be forfeited if
+          your account is terminated. We reserve the right to modify XP earn
+          rates, costs, and the availability of items at any time.
+        </p>
+
+        <h2>5. Subscription Tiers</h2>
+        <p>
+          Chocolingo offers three subscription tiers with the following
+          benefits:
+        </p>
+        <p class="tier-name">Free Tier (default):</p>
+        <ul>
+          <li>3 lives per day (refill daily at midnight UTC)</li>
+          <li>20 questions per day</li>
+          <li>Access to A1, A2, and B1 content</li>
+          <li>Advertisements displayed</li>
+          <li>Streak freeze available for purchase with XP</li>
+        </ul>
+        <p class="tier-name">Plus Tier:</p>
+        <ul>
+          <li>5 lives per day</li>
+          <li>Unlimited questions per day</li>
+          <li>Access to all content (A1–C2)</li>
+          <li>Ad-free experience</li>
+          <li>Automatic streak freeze protection (included)</li>
+        </ul>
+        <p class="tier-name">Pro Tier:</p>
+        <ul>
+          <li>Unlimited lives</li>
+          <li>Unlimited questions per day</li>
+          <li>Access to all content (A1–C2)</li>
+          <li>Ad-free experience</li>
+          <li>Automatic streak freeze protection (included)</li>
+          <li>Access to average stats comparison in Analytics</li>
+        </ul>
+        <p>
+          Subscription tiers may be obtained through in-app purchase (when
+          available), referral code redemption, or promotional offers.
+          Subscriptions are tied to your account and are non-transferable.
+        </p>
+        <p>
+          We reserve the right to modify tier benefits, pricing, and
+          availability at any time. Changes will be communicated through the
+          App.
+        </p>
+
+        <h2>6. Referral Program</h2>
+        <p>
+          Chocolingo offers a referral program. When a valid referral code is
+          redeemed, both the referrer and the new user receive a temporary Plus
+          tier upgrade for 3 days. Referral benefits are subject to the
+          following conditions:
+        </p>
+        <ul>
+          <li>Each referral code can only be used once per new user</li>
+          <li>
+            Referral codes cannot be applied to an existing account that has
+            already used a referral code
+          </li>
+          <li>
+            Fraudulent or abusive use of referral codes may result in account
+            suspension
+          </li>
+          <li>
+            We reserve the right to modify or discontinue the referral program
+            at any time
+          </li>
+        </ul>
+
+        <h2>7. Advertising</h2>
+        <p>
+          Free-tier users may see advertisements within the App served by Google
+          Mobile Ads. By using the free tier of the App, you consent to the
+          display of advertisements. We are not responsible for the content of
+          third-party advertisements.
+        </p>
+        <p>Plus and Pro subscribers enjoy an ad-free experience.</p>
+
+        <h2>8. Intellectual Property</h2>
+        <p>
+          All content within the App, including but not limited to text,
+          graphics, quiz questions, flashcard content, audio, design, and
+          software, is the property of Chocolingo App or its content licensors
+          and is protected by applicable intellectual property laws.
+        </p>
+        <p>
+          You are granted a limited, non-exclusive, non-transferable, revocable
+          license to use the App for personal, non-commercial purposes. You may
+          not reproduce, distribute, or create derivative works from any App
+          content without our express written permission.
+        </p>
+
+        <h2>9. User-Generated Content</h2>
+        <p>
+          The App does not currently support public user-generated content.
+          Display names chosen by users are subject to our content standards —
+          names that are offensive, misleading, or violate these Terms may be
+          removed without notice.
+        </p>
+
+        <h2>10. Leaderboard and Competitive Features</h2>
+        <p>
+          The App includes a weekly competitive leaderboard. Participation in
+          the leaderboard is voluntary. We reserve the right to remove users
+          from the leaderboard or adjust rankings if we detect abuse, cheating,
+          or violations of these Terms. Weekly leaderboard standings reset every
+          Monday at 00:00 UTC.
+        </p>
+
+        <h2>11. App Updates</h2>
+        <p>
+          We may require you to update to the latest version of the App to
+          continue using it. When a mandatory update is required, the App will
+          display a blocking notification until you update. We recommend
+          enabling automatic updates on your device.
+        </p>
+
+        <h2>12. Disclaimers</h2>
+        <p class="caps">
+          THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF
+          ANY KIND, EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE APP WILL BE
+          UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL
+          COMPONENTS.
+        </p>
+        <p>
+          We do not guarantee that use of the App will result in any particular
+          level of English language proficiency. Learning outcomes depend on
+          individual effort and engagement.
+        </p>
+
+        <h2>13. Limitation of Liability</h2>
+        <p class="caps">
+          TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CHOCOLINGO APP
+          SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+          CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OR
+          INABILITY TO USE THE APP, EVEN IF WE HAVE BEEN ADVISED OF THE
+          POSSIBILITY OF SUCH DAMAGES.
+        </p>
+
+        <h2>14. Termination</h2>
+        <p>
+          We may suspend or terminate your access to the App at any time, with
+          or without cause, and with or without notice. Upon termination, your
+          right to use the App ceases immediately. Any XP, subscription
+          benefits, or streak freeze inventory associated with your account will
+          be forfeited.
+        </p>
+        <p>
+          You may delete your account at any time by contacting us or through
+          the App settings.
+        </p>
+
+        <h2>15. Changes to Terms</h2>
+        <p>
+          We reserve the right to modify these Terms at any time. We will notify
+          you of material changes through the App or via email. Your continued
+          use of the App after changes are posted constitutes acceptance of the
+          revised Terms.
+        </p>
+
+        <h2>16. Governing Law</h2>
+        <p>
+          These Terms shall be governed by and construed in accordance with the
+          laws of Mongolia, without regard to its conflict of law provisions.
+          Any disputes arising from these Terms or the App shall be subject to
+          the exclusive jurisdiction of the courts of Mongolia.
+        </p>
+
+        <h2>17. Contact Us</h2>
+        <p>
+          If you have any questions about these Terms of Service, please contact
+          us:
+        </p>
+        <p>
+          Email:
+          <a href="mailto:support@chocolingo.com">support@chocolingo.com</a
+          ><br />
+          Website: <a href="https://chocolingo.com">https://chocolingo.com</a
+          ><br />
+          App: Chocolingo — English Learning for Mongolian Speakers
+        </p>
+      </section>
+
+      <!-- ════════════════════════════════════════════ -->
+      <!-- MONGOLIAN PRIVACY POLICY                     -->
+      <!-- ════════════════════════════════════════════ -->
+      <section
+        id="privacy-mn"
+        class="doc-section"
+        data-lang="mn"
+        data-doc="privacy"
+      >
+        <div class="doc-title">Нууцлалын бодлого</div>
+        <div class="updated">Сүүлд шинэчлэгдсэн: 2026 оны 3 сарын 13</div>
+        <div class="note">
+          Англи болон Монгол хувилбаруудад зөрчил үүсвэл Англи хувилбар
+          давамжтай.
+        </div>
+
+        <p>
+          Chocolingo ("бид" буюу "манай") нь таны нууцлалыг хамгаалахад чин
+          үнэнхүү чармайна. Энэхүү Нууцлалын бодлого нь та Chocolingo мобайл
+          аппликейшн ("Апп")-ыг ашиглах үед бид таны мэдээллийг хэрхэн цуглуулж,
+          ашиглаж, дамжуулж, хамгаалдагийг тайлбарлана. Chocolingo нь монгол
+          хэрэглэгчдэд зориулсан англи хэл сурах платформ юм.
+        </p>
+        <p>
+          Апп-ыг ашигласнаар та энэхүү бодлогонд заасан мэдээлэл цуглуулах,
+          ашиглах журмыг зөвшөөрч буй болно.
+        </p>
+
+        <h2>1. Бид цуглуулдаг мэдээлэл</h2>
+        <h3>1.1 Таны өгөх мэдээлэл</h3>
+        <ul>
+          <li>
+            И-мэйл хаяг болон нууц үг (Supabase Auth-аар бүртгэл үүсгэхэд)
+          </li>
+          <li>Дэлгэцийн нэр</li>
+          <li>Суралцах хэлний сонголт</li>
+          <li>Өдөр тутмын суралцын зорилго</li>
+          <li>Түвшин тогтоох тестийн хариулт</li>
+          <li>Урилгын код (ашигласан болон хуваалцсан тохиолдолд)</li>
+        </ul>
+        <h3>1.2 Автоматаар цуглуулдаг мэдээлэл</h3>
+        <ul>
+          <li>Тестийн хариулт, оноо, нарийвчлалын статистик</li>
+          <li>
+            XP олсон ба зарцуулсан, тасралтгүй өдүүдийн мэдээлэл, амжилтын явц
+          </li>
+          <li>Флэшкарт давталтын түүх, давталтын системийн мэдээлэл</li>
+          <li>
+            Бүртгэлийн түвшин болон ашиглалт (өдөр тутмын асуултын тоо, чадварын
+            нөөц)
+          </li>
+          <li>Апп-ын ашиглалтын хэлбэр ба сессийн үргэлжлэх хугацаа</li>
+          <li>Төхөөрөмжийн төрөл, үйлдлийн систем, апп-ын хувилбар</li>
+          <li>Алдааны тайлан ба алдааны лог (Sentry-гээр)</li>
+          <li>Аналитик үзэгдэл (Firebase Analytics-гээр)</li>
+        </ul>
+        <h3>1.3 Гуравдагч талаас ирэх мэдээлэл</h3>
+        <p>
+          Бид доорх гуравдагч талын үйлчилгээг ашигладаг бөгөөд эдгээр бие даан
+          мэдээлэл цуглуулж болно:
+        </p>
+        <ul>
+          <li>Supabase — баталгаажуулалт, өгөгдлийн сан, бэкэнд дэд бүтэц</li>
+          <li>
+            Google Mobile Ads (AdMob) — үнэгүй хэрэглэгчдэд зориулсан зар
+            сурталчилгааны үйлчилгээ
+          </li>
+          <li>Google Firebase — аналитик болон үзэгдлийн хяналт</li>
+          <li>
+            Sentry — алдааны тайлан ба хяналт (төхөөрөмжийн мэдээлэл, алдааны
+            контекст цуглуулна)
+          </li>
+          <li>
+            ElevenLabs — текст-яриа аудио үүсгэх (урьдчилан бэлтгэсэн аудио;
+            хэрэглэгчийн өгөгдөл ElevenLabs-д явуулдаггүй)
+          </li>
+        </ul>
+
+        <h2>2. Мэдээллийн ашиглалт</h2>
+        <p>Бид цуглуулсан мэдээллийг дараах зорилгод ашиглана:</p>
+        <ul>
+          <li>Бүртгэл үүсгэх ба удирдах</li>
+          <li>CEFR түвшин ба ахицад тулгуурлан суралцын агуулга хүргэх</li>
+          <li>Тасралтгүй өдөр, XP, амжилт, тэргүүлийн жагсаалтыг хянах</li>
+          <li>Давталтын систем (SM-2) ажиллуулах</li>
+          <li>XP-гээр хийх худалдан авалтыг боловсруулах</li>
+          <li>
+            Бүртгэлийн түвшинг удирдах, түвшинд суурилсан агуулгад хандах эрхийг
+            хянах
+          </li>
+          <li>Урилгын кодыг боловсруулах, холбогдох давуу эрхийг олгох</li>
+          <li>Мэдэгдэл илгээх (зөвхөн таны идэвхжүүлсэн тохиолдолд)</li>
+          <li>Үнэгүй хэрэглэгчдэд Google Mobile Ads-аар зар харуулах</li>
+          <li>Апп-ын тогтвортой байдлыг хянах, алдаа засах</li>
+          <li>Үйл ажиллагааг сайжруулах, шинэ функц хөгжүүлэх</li>
+          <li>Бүртгэл ба апп-ын шинэчлэлтийн талаар тантай харилцах</li>
+        </ul>
+
+        <h2>3. Өгөгдлийн хадгалалт ба аюулгүй байдал</h2>
+        <p>
+          Таны өгөгдөл нь Supabase (PostgreSQL) дээр аюулгүй хадгалагдана. Бүх
+          хүснэгтэд мөрийн түвшний аюулгүй байдлын бодлого (RLS) идэвхжүүлсэн.
+          HTTPS/TLS шифрлэлт, хандах эрхийн удирдлага, серверийн талын хэмжээ
+          хязгаарлалт, оруулгын шалгалт зэрэг арга хэмжээ хэрэгжүүлсэн.
+        </p>
+        <p>
+          Бид таны өгөгдлийг хамгаалах боломжит арга хэмжээ авдаг ч электрон
+          хадгалалт буюу дамжуулалт 100% аюулгүй гэж баталгаажуулах боломжгүй.
+        </p>
+
+        <h2>4. Зар сурталчилгаа</h2>
+        <p>
+          Үнэгүй түвшний хэрэглэгчдэд Google Mobile Ads (AdMob)-аар зар
+          харуулагдана. Google нь таны төхөөрөмжийн зарын таних тэмдэгт ба бусад
+          өгөгдлийг ашиглан хувийчилсан зар үзүүлж болно. Та төхөөрөмжийн
+          тохиргооноос зарын хувийчлалаас татгалзах боломжтой.
+        </p>
+        <p>Plus болон Pro бүртгэлтэй хэрэглэгчдэд зар харагдахгүй.</p>
+
+        <h2>5. Бүртгэлийн түвшин</h2>
+        <p>
+          Chocolingo гурван түвшний бүртгэл санал болгодог: Free, Plus, Pro.
+          Таны бүртгэлийн түвшин нь ямар функц, агуулгад хандах эрхтэйг
+          тодорхойлоно. Бид түвшний хязгаарыг хэрэгжүүлэхийн тулд түвшин, дуусах
+          хугацаа, өдөр тутмын ашиглалтын тоолуурыг хадгална.
+        </p>
+
+        <h2>6. Мэдээлэл хуваалцах ба задлах</h2>
+        <p>
+          Бид таны хувийн мэдээллийг зардаггүй. Доорх тохиолдолд л хуваалцаж
+          болно:
+        </p>
+        <ul>
+          <li>
+            Апп-ыг үйл ажиллуулахад шаардлагатай үйлчилгээ үзүүлэгчдэд
+            (Supabase, Google, Sentry, ElevenLabs)
+          </li>
+          <li>Хууль, шүүхийн шийдвэр, засгийн байгууллагын шаардлагаар</li>
+          <li>
+            Chocolingo, хэрэглэгчдийн эрх, өмч, аюулгүй байдлыг хамгаалахад
+          </li>
+          <li>Таны зөвшөөрлөөр</li>
+        </ul>
+        <p>
+          Тэргүүлийн жагсаалтын өгөгдөл (дэлгэцийн нэр, XP эрэмбэ) нь бусад
+          хэрэглэгчдэд харагдана.
+        </p>
+        <p>
+          Урилгын кодыг хэрэглэгчд сайн дураар хуваалцдаг. Код хэрэглэгдсэн үед
+          хоёр тал Plus түвшин авна. Нэмэлт хувийн мэдээлэл дамжуулагдахгүй.
+        </p>
+
+        <h2>7. Хүүхдийн нууцлал</h2>
+        <p>
+          Энэхүү Апп нь 13 наснаас доош хүүхдэд зориулаагүй. 13 наснаас доош
+          хүүхдээс хувийн мэдээлэл зориудаар цуглуулдаггүй. Хүүхэд бидэнд
+          мэдээлэл өгсөн гэж үзвэл бидэнтэй холбогдоно уу.
+        </p>
+        <p>
+          13-18 насны хэрэглэгчд эцэг эх буюу асран хамгаалагчтайгаа энэхүү
+          бодлоготой танилцахыг зөвлөнө.
+        </p>
+
+        <h2>8. Таны эрх</h2>
+        <p>Та дараах эрхтэй:</p>
+        <ul>
+          <li>Бидний хадгалж буй хувийн мэдээлэлдээ хандах</li>
+          <li>Буруу өгөгдлийг засахыг шаардах</li>
+          <li>Бүртгэл болон холбогдох өгөгдлийг устгахыг шаардах</li>
+          <li>
+            Хувийн өгөгдлийг машинд уншигдах форматаар гаргаж авах (өгөгдлийн
+            зөөврүүлэлт)
+          </li>
+          <li>Мэдэгдлийг төхөөрөмжийн тохиргооноос хаах</li>
+          <li>Зарын хувийчлалаас татгалзах (4-р бүлгийг үзнэ үү)</li>
+        </ul>
+        <p>
+          Эдгээр эрхүүдийг эдлэхийг
+          <a href="mailto:support@chocolingo.com">support@chocolingo.com</a>
+          хаягаар холбогдоно уу. Бид 30 хоногийн дотор хариулна.
+        </p>
+
+        <h2>9. Өгөгдлийн хадгалах хугацаа</h2>
+        <p>
+          Таны бүртгэл идэвхтэй байгаа цагт өгөгдлийг хадгална. Бүртгэлээ
+          устгавал 30 хоногийн дотор өгөгдлийг устгах буюу хэн нэргүй болгоно
+          (хуулиар шаардах тохиолдолдоос бусад).
+        </p>
+
+        <h2>10. Оффлайн өгөгдөл</h2>
+        <p>
+          Апп нь таны төхөөрөмжид зарим өгөгдлийг дотооодоо хадгална (SQLite ба
+          төхөөрөмжийн санах ойд). Энэ өгөгдөл интернэтэд холбогдох хүртэл
+          сервер рүү дамжуулагдахгүй. Апп-ыг устгаснаар арилгаж болно.
+        </p>
+
+        <h2>11. Апп-ын шинэчлэлт</h2>
+        <p>
+          Апп зарим функцийг үргэлжлүүлэн ашиглахын тулд хамгийн сүүлийн
+          хувилбар руу шинэчлэхийг шаардаж болно. Шинэчлэлт шаардтай үед
+          мэдэгдэл харуулагдана.
+        </p>
+
+        <h2>12. Бодлогонд оруулах өөрчлөлт</h2>
+        <p>
+          Энэхүү Нууцлалын бодлогоог үе үе шинэчлэж болно. Онцгой өөрчлөлтийн
+          талаар Апп буюу и-мэйлээр мэдэгдэнэ. Өөрчлөлт нийтлэгдсэний дараа
+          Апп-ыг үргэлжлүүлэн ашиглавал шинэчлсэн бодлоготой зөвшөөрсөнд
+          тооцогдоно.
+        </p>
+
+        <h2>13. Холбоо барих</h2>
+        <p>
+          Энэхүү Нууцлалын бодлогоны талаар асуулт байвал бидэнтэй холбогдоно
+          уу:
+        </p>
+        <p>
+          И-мэйл:
+          <a href="mailto:support@chocolingo.com">support@chocolingo.com</a
+          ><br />
+          Вебсайт: <a href="https://chocolingo.com">https://chocolingo.com</a
+          ><br />
+          Апп: Chocolingo — Монголчуудад зориулсан англи хэл сурах апп
+        </p>
+      </section>
+
+      <!-- ════════════════════════════════════════════ -->
+      <!-- MONGOLIAN TERMS OF SERVICE                   -->
+      <!-- ════════════════════════════════════════════ -->
+      <section
+        id="terms-mn"
+        class="doc-section"
+        data-lang="mn"
+        data-doc="terms"
+      >
+        <div class="doc-title">Үйлчилгээний нөхцөл</div>
+        <div class="updated">Сүүлд шинэчлэгдсэн: 2026 оны 3 сарын 13</div>
+        <div class="note">
+          Англи болон Монгол хувилбаруудад зөрчил үүсвэл Англи хувилбар
+          давамжтай.
+        </div>
+
+        <p>
+          Энэхүү Үйлчилгээний нөхцөл ("Нөхцөл") нь таны Chocolingo мобайл
+          аппликейшн ("Апп")-ыг ашиглах журмыг зохицуулна. Chocolingo App ("бид"
+          буюу "манай") нь Апп-ыг ажиллуулдаг. Апп-ыг татаж авах буюу
+          ашигласнаар та энэхүү Нөхцлийг зөвшөөрч буй болно.
+        </p>
+
+        <h2>1. Насны шаардлага</h2>
+        <p>
+          Апп-ыг ашиглахын тулд та доод дээ 13 настай байх ёстой. 18 наснаас
+          доош бол эцэг эх буюу асран хамгаалагчтайгаа энэхүү Нөхцлийг танилцана
+          уу.
+        </p>
+
+        <h2>2. Бүртгэл</h2>
+        <p>
+          Апп-ын ихэнх функцэд хандахын тулд и-мэйл хаяг, нууц үгээр бүртгэл
+          үүсгэх шаардлагатай. Та дараах үүргийг хүлээнэ:
+        </p>
+        <ul>
+          <li>Бүртгэлийн нэвтрэх мэдээллийн нууцлалыг хамгаалах</li>
+          <li>Бүртгэлд хийгдэх үйл ажиллагаанд хариуцлага хүлээх</li>
+          <li>Зөвшөөрөлгүй ашиглалт илэрвэл нэн даруй мэдэгдэх</li>
+        </ul>
+        <p>Нөхцлийг зөрчих бүртгэлийг түр зогсоох буюу устгах эрхтэй.</p>
+
+        <h2>3. Апп-ын ашиглалт</h2>
+        <h3>3.1 Зөвшөөрөгдсөн ашиглалт</h3>
+        <p>
+          Chocolingo нь хувийн, арилжааны бус зорилгоор англи хэл сурах
+          аппликейшн юм.
+        </p>
+        <h3>3.2 Хориглох үйлдэл</h3>
+        <p>Та дараах үйлдлийг хийхгүй байхыг зөвшөөрнө:</p>
+        <ul>
+          <li>Апп-ыг хууль бус зорилгоор ашиглах</li>
+          <li>Эх кодыг задлах, нэвтрүүлэх, гаргаж авах оролдлого хийх</li>
+          <li>XP систем, тэргүүлийн жагсаалт, тоглоомын механизмыг мушгих</li>
+          <li>Давуу тал олохын тулд олон бүртгэл үүсгэх</li>
+          <li>Урилгын кодыг луйврын аргаар ашиглах</li>
+          <li>Автомат хэрэгсэл, бот, скрипт ашиглах</li>
+          <li>Хортой код буюу агуулга байршуулах</li>
+          <li>Бусад хэрэглэгчдийг доромжлох, дүр үзүүлэх, хохироох</li>
+          <li>Бүртгэлийн түвшний хязгаарлалтыг тойрч гарах оролдлого хийх</li>
+        </ul>
+
+        <h2>4. XP систем ба виртуал валют</h2>
+        <p>
+          Chocolingo XP (туршлагын оноо) системийг виртуал валютаар ашигладаг.
+          XP-г тест, үйл ажиллагаа гүйцэтгэснээр олно.
+        </p>
+        <p>XP-г доорх зүйлст зарцуулах боломжтой:</p>
+        <ul>
+          <li>
+            Чадварууд (Алгасах: 50 XP, Зүрхэн бамбай: 80 XP, XP Өсгөлт: 100 XP)
+          </li>
+          <li>
+            Тасралтгүй өдөр хамгаалагч: 500 XP (1 өдөр алгассан үед хамгаална;
+            дээд тээ 1; Plus/Pro автомат хамгаалагдана)
+          </li>
+        </ul>
+        <p>
+          Чухал: XP мөнгөн үнэлэмжгүй, бүртгэл хооронд шилжүүлж болохгүй, бодит
+          мөнгөөр солилцохгүй, бүртгэл устгагдвал алдагдана.
+        </p>
+
+        <h2>5. Бүртгэлийн түвшин</h2>
+        <p>Chocolingo гурван түвшний бүртгэл санал болгоно:</p>
+        <p class="tier-name">Free түвшин (үндсэн):</p>
+        <ul>
+          <li>Өдөрт 3 амь (UTC 00:00-д нөхөн цэнэглэнэ)</li>
+          <li>Өдөрт 20 асуулт</li>
+          <li>A1, A2, B1 агуулгад хандах эрхтэй</li>
+          <li>Зар харагдана</li>
+          <li>Тасралтгүй өдөр хамгаалагчийг XP-гээр худалдаж авах боломжтой</li>
+        </ul>
+        <p class="tier-name">Plus түвшин:</p>
+        <ul>
+          <li>Өдөрт 5 амь</li>
+          <li>Хязгааргүй асуулт</li>
+          <li>Бүх агуулгад хандах эрхтэй (A1–C2)</li>
+          <li>Заргүй</li>
+          <li>Тасралтгүй өдөр автомат хамгаалагдана</li>
+        </ul>
+        <p class="tier-name">Pro түвшин:</p>
+        <ul>
+          <li>Хязгааргүй амь</li>
+          <li>Хязгааргүй асуулт</li>
+          <li>Бүх агуулгад хандах эрхтэй (A1–C2)</li>
+          <li>Заргүй</li>
+          <li>Тасралтгүй өдөр автомат хамгаалагдана</li>
+          <li>Аналитик дээр дундаж үзүүлэлттэй харьцуулах эрхтэй</li>
+        </ul>
+        <p>
+          Бүртгэлийн түвшинг апп доторх худалдан авалт, урилгын код, буюу
+          урамшууллаар авах боломжтой. Бүртгэл шилжүүлэх боломжгүй.
+        </p>
+
+        <h2>6. Урилгын хөтөлбөр</h2>
+        <p>
+          Урилгын код амжилттай ашиглагдсан тохиолдолд урилагч ба шинэ хэрэглэгч
+          хоёр 3 хоногийн Plus түвшний давуу тал хүртэнэ. Нөхцөл:
+        </p>
+        <ul>
+          <li>Урилгын код нэг шинэ хэрэглэгчид нэг л удаа ашиглагдана</li>
+          <li>Урилгын код ашиглаж байсан бүртгэлд дахин хэрэглэх боломжгүй</li>
+          <li>Луйврын ашиглалт илэрвэл бүртгэл түр зогсоогдоно</li>
+          <li>Урилгын хөтөлбөрийг өөрчлөх буюу зогсоох эрхтэй</li>
+        </ul>
+
+        <h2>7. Зар сурталчилгаа</h2>
+        <p>
+          Үнэгүй хэрэглэгчдэд Google Mobile Ads-аар зар харагдана. Гуравдагч
+          талын зарын агуулгад бид хариуцлага хүлээхгүй.
+        </p>
+        <p>Plus болон Pro бүртгэлтэй хэрэглэгчд заргүй орчинд суралцана.</p>
+
+        <h2>8. Оюуны өмч</h2>
+        <p>
+          Апп дахь бүх агуулга нь Chocolingo App буюу агуулгын эзэмшидийн өмч
+          бөгөөд оюуны өмчийн хуульд хамгаалагдана.
+        </p>
+        <p>
+          Танд хувийн, арилжааны бус зорилгоор ашиглах хязгаарлагдмал лицензийг
+          олгогдоно. Бидний бичгээр зөвшөөрөлгүйгээр агуулгаас хуулбарлах,
+          тараах, дериватив бүтээл хийхийг хориглоно.
+        </p>
+
+        <h2>9. Хэрэглэгчийн агуулга</h2>
+        <p>
+          Апп одоогоор нийтийн хэрэглэгчдийн агуулгыг дэмждэггүй. Дэлгэцийн нэр
+          нь манай стандартад нийцэх ёстой — зөрчилдөх нэрийг мэдэгдэлгүйгээр
+          устгаж болно.
+        </p>
+
+        <h2>10. Тэргүүлийн жагсаалт</h2>
+        <p>
+          Апп долоо хэмжээний өрсөлдөөнт тэргүүлийн жагсаалттай. Оролцох нь сайн
+          дурын. Луйврын үйлдэл илэрвэл жагсаалтаас хасах эрхтэй. Жагсаалт Даваа
+          гараг UTC 00:00-д шинэчлэгдэнэ.
+        </p>
+
+        <h2>11. Апп-ын шинэчлэлт</h2>
+        <p>
+          Апп-ыг үргэлжлүүлэн ашиглахын тулд хамгийн сүүлийн хувилбар руу
+          шинэчлэхийг шаардаж болно. Заавал шинэчлэх шаардлагатай тохиолдолд
+          шинэчлэх хүртэл Апп блоклоно.
+        </p>
+
+        <h2>12. Хариуцлага хүлээхгүй</h2>
+        <p class="caps">
+          АПП-ЫГ "БАЙГАА ЧИГЭЭРЭЭ" БОЛОН "БОЛОМЖТОЙ ҮЕД" ГЭСЭН НӨХЦӨЛӨӨР ЯМАР Ч
+          БАТАЛГААГҮЙ САНАЛ БОЛГОНО.
+        </p>
+        <p>
+          Апп-ыг ашигласнаар англи хэлний ямар нэг тодорхой түвшинд хүрнэ гэсэн
+          баталгаа өгөхгүй.
+        </p>
+
+        <h2>13. Хариуцлагын хязгаарлалт</h2>
+        <p class="caps">
+          ХУУЛЬД ЗӨВШӨӨРӨГДСӨН ХЭМЖЭЭНД CHOCOLINGO APP НЬ АПП-ЫГ АШИГЛАСАН БУЮУ
+          АШИГЛАЖ ЧАДААГҮЙГЭЭС ҮҮДСЭН ШУУД БУС БОЛОН ДАМ ХОХИРОЛ ХАРИУЦЛАГА
+          ХҮЛЭЭХГҮЙ.
+        </p>
+
+        <h2>14. Зогсоох</h2>
+        <p>
+          Апп-д хандах эрхийг ямар ч үед түр зогсоох эрхтэй. Зогсоосноор ашиглах
+          эрх нэн даруй дуусна. XP, бүртгэлийн давуу эрх, тасралтгүй өдөр
+          хамгаалагчийн нөөц зэрэг алдагдана.
+        </p>
+        <p>
+          Бүртгэлийг хүссэн үедээ бидэнтэй холбогдох буюу Апп-ын тохиргооноос
+          устгах боломжтой.
+        </p>
+
+        <h2>15. Нөхцлийн өөрчлөлт</h2>
+        <p>
+          Энэхүү Нөхцлийг хүссэн үедээ өөрчлөх эрхтэй. Онцгой өөрчлөлтийн талаар
+          Апп буюу и-мэйлээр мэдэгдэнэ.
+        </p>
+
+        <h2>16. Хэрэглэх хууль</h2>
+        <p>
+          Энэхүү Нөхцөл Монгол Улсын хуулиар зохицуулагдана. Маргааныг Монгол
+          Улсын шүүхээр шийдвэрлүүлнэ.
+        </p>
+
+        <h2>17. Холбоо барих</h2>
+        <p>Асуулт байвал бидэнтэй холбогдоно уу:</p>
+        <p>
+          И-мэйл:
+          <a href="mailto:support@chocolingo.com">support@chocolingo.com</a
+          ><br />
+          Вебсайт: <a href="https://chocolingo.com">https://chocolingo.com</a
+          ><br />
+          Апп: Chocolingo — Монголчуудад зориулсан англи хэл сурах апп
+        </p>
+      </section>
+
+      <div class="footer">© 2026 Chocolingo. All rights reserved.</div>
+    </div>
+
+    <script>
+      let currentLang = "en";
+      let currentDoc = "privacy";
+
+      const navLinks = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll(".doc-section");
+      const langBtn = document.getElementById("lang-toggle");
+
+      function showSection(doc, lang) {
+        currentDoc = doc;
+        currentLang = lang;
+
+        const targetId = `${doc}-${lang}`;
+
+        sections.forEach((s) => s.classList.remove("active"));
+        const target = document.getElementById(targetId);
+        if (target) target.classList.add("active");
+
+        // Update nav link active states — match by doc type
+        navLinks.forEach((link) => {
+          const linkSection = link.dataset.section;
+          // linkSection is like "privacy-en" or "terms-en"
+          const linkDoc = linkSection.replace("-en", "").replace("-mn", "");
+          link.classList.toggle("active", linkDoc === doc);
+          // Update href to current language version
+          link.href = `#${linkDoc}-${lang}`;
+          link.dataset.section = `${linkDoc}-${lang}`;
+        });
+
+        // Update nav labels based on language
+        if (lang === "mn") {
+          navLinks[0].textContent = "Нууцлалын бодлого";
+          navLinks[1].textContent = "Үйлчилгээний нөхцөл";
+          langBtn.textContent = "EN 🇺🇸";
+        } else {
+          navLinks[0].textContent = "Privacy Policy";
+          navLinks[1].textContent = "Terms of Service";
+          langBtn.textContent = "MN 🇲🇳";
+        }
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const sectionId = link.dataset.section;
+          const doc = sectionId.replace(`-${currentLang}`, "");
+          showSection(doc, currentLang);
+        });
+      });
+
+      function toggleLang() {
+        const newLang = currentLang === "en" ? "mn" : "en";
+        showSection(currentDoc, newLang);
+      }
+
+      // Handle direct URL anchors
+      function handleHash() {
+        const hash = window.location.hash.replace("#", "");
+        if (hash) {
+          const parts = hash.split("-");
+          if (parts.length === 2) {
+            const [doc, lang] = parts;
+            if (
+              ["privacy", "terms"].includes(doc) &&
+              ["en", "mn"].includes(lang)
+            ) {
+              showSection(doc, lang);
+              return;
+            }
+          }
+        }
+        showSection("privacy", "en");
+      }
+
+      window.addEventListener("hashchange", handleHash);
+      handleHash();
+    </script>
+  </body>
+</html>
